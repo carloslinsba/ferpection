@@ -36,6 +36,11 @@ def read_item_file(item_file, groups_dict):
         else:
             raise Exception('Item filetype should be .csv or .json')
 
+def write(items_dict : dict, output_file: str):
+    if is_file_a_csv_or_json(output_file, '.json'):
+        JsonWriter().write_to_json(items_dict, output_file)
+    else:
+        raise Exception('Output filetype must .json')
 
 
 if __name__ == '__main__':
@@ -52,7 +57,7 @@ if __name__ == '__main__':
     except:
         raise Exception('Please check your input files') 
     try:
-        JsonWriter().write_to_json(items_dict, output_file)
+        write(items_dict, output_file)
     except: 
         raise Exception('Not possible to write output file.')
     
