@@ -40,7 +40,7 @@ def write(items_dict : dict, output_file: str):
     if is_file_a_csv_or_json(output_file, '.json'):
         JsonWriter().write_to_json(items_dict, output_file)
     else:
-        raise Exception('Output filetype must .json')
+        raise Exception('Output filetype must be .json')
 
 
 if __name__ == '__main__':
@@ -59,5 +59,5 @@ if __name__ == '__main__':
     try:
         write(items_dict, output_file)
     except: 
-        raise Exception('Not possible to write output file.')
+        raise Exception('Error writing output file. Do you have permission? ')
     
