@@ -2,16 +2,6 @@
 
 ## Purpose
 
-You must implement a conversion system from CSV OR JSON format to JSON.
-
-***DISCLAIMER***
-I received the link to the task in the previous format, but saw today that it changed to become simpler.
-I read it yesterday and started coding today in late afternoon (july 15th). Yesterday I undertood I could receive either Json or CSV files and was supposed to output to both/either. 
-So, I did a reader for both files. But then I updated the page/ferpection task and no jsons were required anymore for reading and no CSV for writing. 
-As I already did csv and json reading I left it there. 
-As I was to do the writing part, it just outputs to Json.
-*****
-
 
 You must implement a conversion system from CSV OR JSON format to JSON. 
 
@@ -57,6 +47,7 @@ It will be run similar to the following example:
 
 ```# python3 main.py items.csv groups.csv -o output.json```
 
+
 The CLI should also output a help when called with:
 
 ```# python3 main.py -h```
@@ -71,3 +62,12 @@ Please note your program will be run using different input files to check the va
 More info on structured JSON https://docs.transifex.com/formats/json/structured-json
 
 This exercise should not take you more than 3 hours. Please reach out if you have difficulty so we can discuss next steps. Do not spend days trying to craft a solution to impress, this is not the goal.
+
+***DISCLAIMER***
+I received the link to the task a few days ago.
+I read it yesterday and started coding today in late afternoon (july 15th). 
+I understood I could receive either Json or CSV files and was supposed to output to both/either. 
+So, I did a reader for both files. But then I updated the ferpection page task and no jsons were required anymore for reading and no CSV for writing. 
+As I already did csv and json reading I left it there. 
+As I was to do the writing part, it just outputs to Json.
+*****
