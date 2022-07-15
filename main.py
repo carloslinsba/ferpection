@@ -4,8 +4,8 @@ from json_writer import JsonWriter
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('items', help='Please input filePath containing items, accepts json or csv')
-parser.add_argument('groups', help='Please input filePath containing groups, accepts json or csv')
+parser.add_argument('items', help='Please input filename containing items, accepts json or csv')
+parser.add_argument('groups', help='Please input filename containing groups, accepts json or csv')
 parser.add_argument('-o',"--output_file", help='Please input filename to the output file', required=True)
 
 
@@ -26,7 +26,7 @@ def read_group_file(group_file: str):
             raise Exception('Group filetype should be .csv or .json')
     
     
-def read_item_file(item_file, items_dict, groups_dict):
+def read_item_file(item_file, groups_dict):
     """checks if item file is csv or json and reads it"""
     if is_file_a_csv_or_json(item_file, '.csv'):
         return CsvReader().item_reader(item_file, groups_dict)
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     items_dict={}
     try:
         groups_dict= read_group_file(group_file)
-        items_dict= read_item_file(item_file, items_dict, groups_dict)
+        items_dict= read_item_file(item_file, groups_dict)
     except:
         raise Exception('Please check your input files') 
     try:
